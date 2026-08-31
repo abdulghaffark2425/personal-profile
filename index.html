@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Requirement: Proper page title -->
+    <title>Personal Profile - Abdul Ghaffar</title>
+    <!-- Requirement: TailwindCSS integration via CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <div class="profile-card">
-        <!-- Main Heading (Name) -->
-        <h1>John Doe</h1>
-        <p class="subtitle">Full Stack Web Developer</p>
-        
-        <!-- Profile Image -->
-        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
 
-        <!-- About Me Section -->
-        <section class="about-section">
-            <h2>About Me</h2>
-            <p>
-                Hello! I am a passionate Web Developer learning Full Stack Development with the MERN stack. 
-                I enjoy building interactive, user-friendly, and responsive web applications.
+    <!-- Requirement: Clean Card / Container Layout & Responsive Design -->
+    <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 p-8 space-y-6">
+        
+        <!-- Requirement: Name as Main Heading -->
+        <header class="text-center border-b pb-6 border-gray-200">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">Abdul Ghaffar</h1>
+            <p class="text-blue-600 font-medium text-lg mt-1">Full Stack MERN Developer</p>
+        </header>
+
+        <!-- Requirement: About Me section using paragraphs -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-2 border-l-4 border-blue-500 pl-3">About Me</h2>
+            <p class="text-gray-600 leading-relaxed text-justify">
+                Hello! I am a passionate Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React, Node.js). I enjoy designing responsive user interfaces, creating secure backend authentication APIs, and building multi-tenant web applications with seamless billing integrations.
             </p>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills-section">
-            <h2>My Skills</h2>
-            <ul class="skills-list">
-                <li>HTML5 & CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React.js</li>
-                <li>Node.js & Express</li>
-                <li>Git & GitHub</li>
+        <!-- Requirement: Skills section using a list -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-700 mb-3 border-l-4 border-blue-500 pl-3">Skills</h2>
+            <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-gray-700 font-medium">
+                <li class="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-center border border-blue-100">HTML5 & CSS3</li>
+                <li class="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-center border border-blue-100">Tailwind CSS</li>
+                <li class="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-center border border-blue-100">JavaScript (ES6+)</li>
+                <li class="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-center border border-blue-100">React.js (Vite)</li>
+                <li class="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-center border border-blue-100">Node.js & Express</li>
+                <li class="bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-center border border-blue-100">MongoDB & Git</li>
             </ul>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
-            <p>GitHub: <a href="https://github.com" target="_blank">github.com/johndoe</a></p>
+        <!-- Requirement: Contact section using email/contact links -->
+        <section class="border-t pt-6 border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-700 mb-2 border-l-4 border-blue-500 pl-3">Contact</h2>
+            <p class="text-gray-600 mb-4">Feel free to reach out to me for collaboration or inquiries:</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="mailto:abdulghaffark2425@gmail.com" class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-lg shadow transition duration-200">
+                    📧 Email Me
+                </a>
+                <a href="https://github.com/abdulghaffark2425" target="_blank" class="inline-flex items-center justify-center bg-gray-800 hover:bg-gray-900 text-white font-medium px-5 py-2.5 rounded-lg shadow transition duration-200">
+                    🔗 GitHub Profile
+                </a>
+            </div>
         </section>
+
     </div>
+
 </body>
 </html>
